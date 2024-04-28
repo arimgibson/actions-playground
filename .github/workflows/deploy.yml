@@ -1,0 +1,11 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  check_storage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Disk Space
+        run: |
+          echo "Checking current storage space..."
+          echo "$(df -h)"
